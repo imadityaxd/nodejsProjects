@@ -136,3 +136,20 @@ function sum (accumulator, element){
     console.log(`${accumulator} and ${element} = ${accumulator + element}`);
     return accumulator + element;
 }
+
+const maximum = prices.reduce(getMax);
+const minimum = prices.reduce(getMin);
+
+console.log(maximum);
+console.log(minimum);
+
+function getMin(accumulator, element){
+
+    console.log(`${accumulator} and ${element}`);
+    return Math.min(accumulator,element);
+}
+function getMax(accumulator, element){
+
+    console.log(`${accumulator} and ${element}`);
+    return Math.max(accumulator,element);
+}
